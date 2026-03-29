@@ -721,7 +721,7 @@
 */
 
 /* @import "./css/tabs/default_tabs_reduce_height.css"; /**/ /* Fx133 introduced new tab dimensions this setting tries to bybass */
-/* @import "./css/tabs/default_tabs_reduce_spaces.css"; /**/
+@import "./css/tabs/default_tabs_reduce_spaces.css"; /**/
 
 
 /* ---------------------------------------
@@ -1134,6 +1134,7 @@
    [!] enable browser.compactmode.show preference and compact density in 'Customize' mode  
 */
 
+@import "./css/locationbar/locationbar_reduce_height.css"; /**/
 /* @import "./css/locationbar/compact_mode_reduce_fontsize.css"; /**/
 
 

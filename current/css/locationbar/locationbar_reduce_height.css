@@ -1,0 +1,60 @@
+/* Firefox userChrome.css tweaks ********************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+/****************************************************/
+/* Reduce navigation toolbar and location bar height */
+/****************************************************/
+
+:root {
+  --toolbarbutton-inner-padding: 5px !important;
+  --urlbar-container-height: 30px !important;
+  --urlbar-height: 28px !important;
+}
+
+#nav-bar {
+  min-height: 32px !important;
+}
+
+#nav-bar #nav-bar-overflow-button,
+#nav-bar #nav-bar-customization-target > toolbarbutton,
+#nav-bar #nav-bar-customization-target > toolbaritem,
+#nav-bar #nav-bar-customization-target #stop-reload-button > toolbarbutton {
+  margin-block: 0 !important;
+  padding-block: 0 !important;
+}
+
+#urlbar-container,
+#search-container {
+  padding-block: 0 !important;
+}
+
+#urlbar,
+#searchbar,
+.searchbar-textbox {
+  min-height: 28px !important;
+  height: 28px !important;
+  margin-block: 1px !important;
+}
+
+#urlbar-background,
+#searchbar {
+  min-height: 28px !important;
+}
+
+#urlbar > :is(#urlbar-input-container,.urlbar-input-container),
+#searchbar .searchbar-textbox {
+  min-height: 26px !important;
+  height: 26px !important;
+  padding-block: 0 !important;
+}
+
+#urlbar .urlbar-icon,
+#urlbar .urlbar-page-action,
+#searchbar .searchbar-search-icon,
+#searchbar .search-go-button {
+  width: 16px !important;
+  height: 16px !important;
+  padding: 2px !important;
+}
