@@ -201,6 +201,13 @@ Recommended workflow for Claude/Codex-style agents:
 5. confirm import paths and surrounding conventions
 6. report exactly what changed and whether Firefox runtime verification was performed
 
+## README Localization Rules
+
+- `README.md` is the source README for repository documentation updates.
+- When `README.md` is added to or changed, update `README.zh-CN.md` and `README.ja.md` in the same task unless the user explicitly asks not to.
+- Keep the language-navigation links at the top of all README variants consistent.
+- For localized README updates, use a two-step translation workflow: make a faithful direct translation first, then polish it into natural target-language prose.
+
 ## Response Expectations
 
 When reporting work back to the user:
