@@ -338,6 +338,9 @@
    ----------------------
 */
 
+/* show ".." on navigation toolbar buttons until the toolbar is hovered */
+@import "./css/buttons/toolbar_buttons_show_dots_until_navbar_hover.css"; /**/
+
 @import "./css/buttons/whatnew_button_always_hidden.css"; /**/
 /* @import "./css/buttons/forward_button_hide_when_disabled.css"; /**/
 /* @import "./css/buttons/back_and_forward_separated_history_popups.css"; /**/

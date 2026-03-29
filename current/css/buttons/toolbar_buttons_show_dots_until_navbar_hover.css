@@ -1,0 +1,44 @@
+/* Firefox userChrome.css tweaks ********************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+/******************************************************/
+/* Show ".." on navigation toolbar buttons by default */
+/* Restore button icons when navigation toolbar hovers */
+/******************************************************/
+
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]),
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]),
+#main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]),
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem[id$="-browser-action"] {
+  position: relative !important;
+}
+
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"])::after,
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"])::after,
+#main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"])::after,
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem[id$="-browser-action"]::after {
+  content: ".." !important;
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  display: block !important;
+  width: max-content !important;
+  height: max-content !important;
+  line-height: 1 !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  letter-spacing: -1px !important;
+  color: currentColor !important;
+  pointer-events: none !important;
+  z-index: 2 !important;
+}
+
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]) :is(.toolbarbutton-icon,.toolbarbutton-text,.toolbarbutton-badge-stack,.dropmarker-icon),
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]) :is(.toolbarbutton-icon,.toolbarbutton-text,.toolbarbutton-badge-stack,.dropmarker-icon),
+#main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]) :is(.toolbarbutton-icon,.toolbarbutton-text,.toolbarbutton-badge-stack,.dropmarker-icon),
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem[id$="-browser-action"] * {
+  opacity: 0 !important;
+}
