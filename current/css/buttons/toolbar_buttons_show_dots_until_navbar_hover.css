@@ -4,7 +4,7 @@
 
 
 /******************************************************/
-/* Show ".." on navigation toolbar buttons by default */
+/* Show "." on navigation toolbar buttons by default */
 /* Restore button icons when navigation toolbar hovers */
 /******************************************************/
 
@@ -19,7 +19,7 @@
 #main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active)::after,
 #main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active)::after,
 #main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem[id$="-browser-action"]::after {
-  content: ".." !important;
+  content: "." !important;
   position: absolute !important;
   top: 50% !important;
   left: 50% !important;
