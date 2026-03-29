@@ -28,7 +28,7 @@
   
   /* tab colors
   */
-  --classic_squared_tabs_active_tab: linear-gradient(to top,#f9f9fa,#f9f9fa,#f9f9fa) !important; /* (to bottom,#FF8800,#FFCC99) */
+  --classic_squared_tabs_active_tab: linear-gradient(to top,#d9ebff,#ebf5ff,#f7fbff) !important; /* (to bottom,#FF8800,#FFCC99) */
   --classic_squared_tabs_hovered_tabs: linear-gradient(to top,#cac7c1,#d5d2cc,#e8e6e2) !important; /* (to bottom,#FF9900,#FF6600) */
   --classic_squared_tabs_other_tabs: linear-gradient(to top,#aeaba5,#c1beb7,#c9c6be) !important; /* (to bottom,#FFCC99,#CCCCCC) */
   --classic_squared_tabs_unloaded_tabs: linear-gradient(to top,#aeaba5,#c1beb7,#c9c6be) !important; /* (to bottom,#FFCC99,#CCCCCC) */
