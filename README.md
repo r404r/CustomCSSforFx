@@ -1,3 +1,11 @@
+## Preview
+
+Default state:  
+![Default preview](assets/preview-001.png)
+
+Mouse over toolbar:  
+![Toolbar hover preview](assets/preview-002.png)
+
 ## Downloads for Firefox
 
 - **[CustomCSSforFx - current release & changelog](https://github.com/Aris-t2/CustomCSSforFx/releases)** - **[Last version with 102 ESR support](https://github.com/Aris-t2/CustomCSSforFx/releases/tag/4.2.8)**  
