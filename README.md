@@ -112,3 +112,26 @@ Open `userChrome.css` file
 Look for `/* @import "./css/locationbar/reader_alternative_icon.css"; /**/`  
 Remove `/*` at lines start to enable the alternative reader icon appearance.  
 The result should look like `@import "./css/locationbar/reader_alternative_icon.css"; /**/` 
+
+## Using a symbolic link for the `chrome` folder
+
+Instead of copying the files from `current/` into a Firefox profile manually after every change, it is also possible to link the profile `chrome` folder directly to this repositories `current/` folder.
+
+On macOS or Linux this can be done with a symbolic link.
+
+Example:
+
+```bash
+ln -s "/path/to/CustomCSSforFx/current" "/path/to/Firefox/Profile/chrome"
+```
+
+In this setup Firefox will read the files directly from the repository checkout.
+This is useful when modifying CSS often, because changes only need a Firefox restart and do not require copying files again.
+
+Notes:
+
+- remove or rename an existing profile `chrome` folder before creating the link
+- make sure the linked `current/` folder contains `userChrome.css`, `userContent.css`, `config/`, `css/` and `image/`
+- restart Firefox after every modification
+
+On Windows a similar setup should also be possible by using a directory symbolic link or junction that points the profile `chrome` folder to the repository `current/` folder, but this has not been tested here.
