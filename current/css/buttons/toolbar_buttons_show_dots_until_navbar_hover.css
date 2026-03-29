@@ -8,16 +8,16 @@
 /* Restore button icons when navigation toolbar hovers */
 /******************************************************/
 
-#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]),
-#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]),
-#main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]),
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active),
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active),
+#main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active),
 #main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem[id$="-browser-action"] {
   position: relative !important;
 }
 
-#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"])::after,
-#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"])::after,
-#main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"])::after,
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active)::after,
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active)::after,
+#main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active)::after,
 #main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem[id$="-browser-action"]::after {
   content: ".." !important;
   position: absolute !important;
@@ -36,9 +36,9 @@
   z-index: 2 !important;
 }
 
-#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]) :is(.toolbarbutton-icon,.toolbarbutton-text,.toolbarbutton-badge-stack,.dropmarker-icon),
-#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]) :is(.toolbarbutton-icon,.toolbarbutton-text,.toolbarbutton-badge-stack,.dropmarker-icon),
-#main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active,[disabled="true"]) :is(.toolbarbutton-icon,.toolbarbutton-text,.toolbarbutton-badge-stack,.dropmarker-icon),
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active) :is(.toolbarbutton-icon,.toolbarbutton-text,.toolbarbutton-badge-stack,.dropmarker-icon),
+#main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active) :is(.toolbarbutton-icon,.toolbarbutton-text,.toolbarbutton-badge-stack,.dropmarker-icon),
+#main-window:not([customizing]) #nav-bar:not(:hover) > :is(toolbarbutton,.toolbarbutton-1):not([open],[checked],:active) :is(.toolbarbutton-icon,.toolbarbutton-text,.toolbarbutton-badge-stack,.dropmarker-icon),
 #main-window:not([customizing]) #nav-bar:not(:hover) #nav-bar-customization-target > toolbaritem[id$="-browser-action"] * {
   opacity: 0 !important;
 }
