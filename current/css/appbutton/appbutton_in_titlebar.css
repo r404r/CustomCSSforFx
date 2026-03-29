@@ -8,7 +8,7 @@
 /************************************************/
 
 :root {
-  --appbutton_in_titlebar: 95px !important;
+  --appbutton_in_titlebar: 60px !important;
 }
 
 /* menubar adjustments */
@@ -136,7 +136,7 @@
 /* 'Firefox' title */
 #main-window:is([tabsintitlebar],[customtitlebar]) #PanelUI-menu-button[label="Firefox"]::after,
 #main-window:is([tabsintitlebar],[customtitlebar]) #PanelUI-menu-button:not([label="Nightly"],[label="Firefox Nightly"],[label="Firefox Developer Edition"],[label="Firefox"],[label="Tor Browser"],[label="Tor-Browser"])::after {
-  content: "Firefox" !important;
+  content: "F" !important;
 }
 
 /* 'DevFox' title */
