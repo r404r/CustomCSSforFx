@@ -1,0 +1,4 @@
+/* Fix: urlbar dropdown popup opaque background */
+#urlbar[breakout] .urlbarView {
+  background-color: Field !important;
+}
