@@ -169,4 +169,14 @@ ln -s "/path/to/CustomCSSforFx/current" "/path/to/Firefox/Profile/chrome"
 - 确保被链接的 `current/` 文件夹中包含 `userChrome.css`、`userContent.css`、`config/`、`css/` 和 `image/`
 - 每次修改后都要重启 Firefox
 
-在 Windows 上，也可以考虑使用目录符号链接或 junction，将配置文件中的 `chrome` 文件夹指向仓库的 `current/` 文件夹，但这里尚未实际测试。
+在 Windows 上，需要在 **管理员权限的 PowerShell** 中执行以下命令：
+
+```powershell
+New-Item -Path "<Firefox 配置文件>\chrome" -ItemType SymbolicLink -Value "<仓库路径>\CustomCSSforFx\current"
+```
+
+示例：
+
+```powershell
+New-Item -Path "C:\Users\MyUser\AppData\Roaming\Mozilla\Firefox\Profiles\xyz123ab.default-release\chrome" -ItemType SymbolicLink -Value "D:\repos\CustomCSSforFx\current"
+```

@@ -165,4 +165,14 @@ Notes:
 - make sure the linked `current/` folder contains `userChrome.css`, `userContent.css`, `config/`, `css/` and `image/`
 - restart Firefox after every modification
 
-On Windows a similar setup should also be possible by using a directory symbolic link or junction that points the profile `chrome` folder to the repository `current/` folder, but this has not been tested here.
+On Windows, run the following command in **PowerShell as Administrator**:
+
+```powershell
+New-Item -Path "<Firefox Profile>\chrome" -ItemType SymbolicLink -Value "<Repository>\CustomCSSforFx\current"
+```
+
+Example:
+
+```powershell
+New-Item -Path "C:\Users\MyUser\AppData\Roaming\Mozilla\Firefox\Profiles\xyz123ab.default-release\chrome" -ItemType SymbolicLink -Value "D:\repos\CustomCSSforFx\current"
+```
