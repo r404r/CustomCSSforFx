@@ -30,6 +30,7 @@
 - [Firefox 配置文件夹在哪里？用户样式的正确放置位置](#where-to-find-firefox-profile-folder-the-correct-location-for-user-styles)  
 - [如何使用自定义用户样式？](#how-to-use-custom-user-styles)  
 - [如何查找元素 id 和属性？](#how-to-find-item-ids-and-attributes)  
+- [自定义 CSS 代码应该放在哪里？](#where-to-add-custom-css-code)
 - [如何修改自定义用户样式？](#how-to-modify-custom-user-styles)  
 - [Firefox Color（与 CustomCSSforFx 默认配色预设兼容）](https://color.firefox.com/)    
 
@@ -108,6 +109,20 @@ about:config > devtools.debugger.remote-enabled > true
 
 如果想在检查时强制保持弹出菜单不自动关闭：  
 点击“自定义工具和获取帮助”按钮（即三点按钮），然后选择“禁用弹出窗口自动隐藏”。  
+
+<a id="where-to-add-custom-css-code"></a>
+## 自定义 CSS 代码应该放在哪里？
+
+`userChrome.css` 在末尾导入了 `my_userChrome.css` 文件（如果存在）。这是专为你自己的 CSS 代码预留的位置。
+
+| 修改类型 | 修改位置 |
+|---------|---------|
+| 启用/禁用已有功能模块 | `userChrome.css`（切换 `@import` 注释） |
+| 调整已有模块的变量值（颜色、尺寸等） | 对应的 `config/*.css` 文件 |
+| 项目没有提供的新自定义样式 | `my_userChrome.css` |
+| 修复已有模块的 bug | 视情况：小修放 `my_userChrome.css`，大改直接改模块文件 |
+
+`my_userChrome.css` 在 `userChrome.css` 的最后被导入，加载优先级最高，可以覆盖上方所有模块的样式。更重要的是，升级上游项目时 `my_userChrome.css` 不会被覆盖。
 
 <a id="how-to-modify-custom-user-styles"></a>
 ## 如何修改自定义用户样式？

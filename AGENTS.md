@@ -99,6 +99,26 @@ When adding a new tweak:
 - prefer adding a focused CSS file in the relevant `current/css/<area>/` directory
 - then add a matching `@import` entry in the correct entry file if the feature should be selectable
 
+## Custom User Code: my_userChrome.css
+
+`userChrome.css` imports `my_userChrome.css` at the very end (if the file exists).
+This is the designated location for user-specific CSS overrides that are not part
+of any existing project module.
+
+Decision criteria for where to place a change:
+
+| Situation | Edit location |
+|-----------|--------------|
+| Toggle an existing feature on/off | `userChrome.css` (flip `@import` comment) |
+| Adjust variables in an existing module (colors, sizes, etc.) | Corresponding `config/*.css` file |
+| New custom styling not covered by any existing module | `my_userChrome.css` |
+| Bug fix in an existing module | Small fix: `my_userChrome.css`; larger fix: edit the module directly |
+
+Key properties of `my_userChrome.css`:
+
+- Loaded last, so it has the highest cascade priority and can override all modules above.
+- Not tracked by upstream, so it survives project updates.
+
 ## What Agents Must Not Assume
 
 Do not assume this repository can:

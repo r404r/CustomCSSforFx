@@ -16,8 +16,11 @@ manager, and no automated test suite.
    Grep for searching selectors, and Glob for finding files.
 3. When toggling features, follow the exact `@import` comment pattern documented in
    AGENTS.md — do not invent alternative commenting styles.
-4. After editing, verify import paths and asset paths are correct by inspection.
-5. Report what changed, the behavioral effect, and whether Firefox runtime verification
+4. When adding custom CSS that does not belong to an existing module, place it in
+   `current/my_userChrome.css` (imported last, highest priority, survives updates).
+   See AGENTS.md for the full decision matrix on where to edit.
+5. After editing, verify import paths and asset paths are correct by inspection.
+6. Report what changed, the behavioral effect, and whether Firefox runtime verification
    was performed.
 
 ## Claude Code Constraints

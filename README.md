@@ -30,6 +30,7 @@ This project is dual-licensed under the GPLv3 and MPL 2.0, see the terms of the 
 - [Where to find Firefox profile folder? The correct location for user styles.](#where-to-find-firefox-profile-folder-the-correct-location-for-user-styles)  
 - [How to use custom user styles?](#how-to-use-custom-user-styles)  
 - [How to find item ids and attributes?](#how-to-find-item-ids-and-attributes)  
+- [Where to add custom CSS code?](#where-to-add-custom-css-code)
 - [How to modify custom user styles?](#how-to-modify-custom-user-styles)  
 - [Firefox Color (compatible with default color preset of CustomCSSforFx)](https://color.firefox.com/)    
 
@@ -103,6 +104,22 @@ Inspect ui or web content.
 
 Force popups to stay open for inspection: 
 Click on 'Customize Tools and get help button' (= button with three dots) and select 'Disable popup auto-hide'.  
+
+## Where to put your own custom CSS code?
+
+The project provides a dedicated file for user customizations: **`my_userChrome.css`**.
+It is imported at the very end of `userChrome.css`, so it loads last and can override any style from the project's modules.
+
+When to edit which file:
+
+| Goal | File |
+|------|------|
+| Enable / disable existing feature modules | `userChrome.css` (toggle `@import` comments) |
+| Adjust variables (colors, sizes, etc.) in existing modules | Files inside `config/` |
+| Add your own custom CSS that does not fit into any existing module | `my_userChrome.css` |
+| Fix a bug in an existing project module | Edit the module file directly and consider an upstream PR |
+
+Keeping your custom code in `my_userChrome.css` means it will not be overwritten when updating the upstream project.
 
 ## How to modify custom user styles?
 

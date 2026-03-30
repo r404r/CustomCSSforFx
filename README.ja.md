@@ -30,6 +30,7 @@
 - [Firefox のプロファイルフォルダーはどこ？ ユーザースタイルの正しい配置先](#where-to-find-firefox-profile-folder-the-correct-location-for-user-styles)  
 - [カスタムユーザースタイルの使い方](#how-to-use-custom-user-styles)  
 - [要素の id や属性を調べる方法](#how-to-find-item-ids-and-attributes)  
+- [カスタム CSS コードをどこに追加するか](#where-to-add-custom-css-code)
 - [カスタムユーザースタイルを編集する方法](#how-to-modify-custom-user-styles)  
 - [Firefox Color（CustomCSSforFx のデフォルト配色プリセットと互換）](https://color.firefox.com/)    
 
@@ -108,6 +109,20 @@ about:config > devtools.debugger.remote-enabled > true
 
 ポップアップを検証中に開いたままにしたい場合:  
 「ツールをカスタマイズしてヘルプを表示」ボタン（三点ボタン）をクリックし、「ポップアップの自動非表示を無効にする」を選択します。  
+
+<a id="where-to-add-custom-css-code"></a>
+## カスタム CSS コードをどこに追加するか
+
+`userChrome.css` は末尾で `my_userChrome.css` をインポートしています（ファイルが存在する場合）。これは独自の CSS コード用に予約された場所です。
+
+| 変更の種類 | 編集先 |
+|-----------|-------|
+| 既存機能モジュールの有効化/無効化 | `userChrome.css`（`@import` 行のコメントを切り替え） |
+| 既存モジュールの変数値の調整（色やサイズなど） | 対応する `config/*.css` ファイル |
+| プロジェクトに用意されていない新しいカスタムスタイル | `my_userChrome.css` |
+| 既存モジュールのバグ修正 | 状況による: 小規模な修正は `my_userChrome.css`、大規模な変更はモジュールファイルを直接編集 |
+
+`my_userChrome.css` は `userChrome.css` の最後にインポートされるため、読み込み優先度が最も高く、上方のすべてのモジュールのスタイルを上書きできます。さらに重要な点として、上游プロジェクトの更新時に `my_userChrome.css` は上書きされません。
 
 <a id="how-to-modify-custom-user-styles"></a>
 ## カスタムユーザースタイルを編集する方法
