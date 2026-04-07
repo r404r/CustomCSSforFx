@@ -1,4 +1,12 @@
 /* Fix: urlbar dropdown popup opaque background */
 #urlbar[breakout] .urlbarView {
-  background-color: Field !important;
+    background-color: Field !important;
+}
+
+/* Fix: restore draggable space in title bar when many tabs are open.
+   classic_squared_tabs.css hides post-tabs spacer (display: none),
+   which leaves no room to drag the window. */
+:is(#TabsToolbar, #vertical-tabs) .titlebar-spacer[type="post-tabs"] {
+    display: flex !important;
+    width: 20px !important;
 }
