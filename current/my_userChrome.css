@@ -27,3 +27,22 @@
 .tab-label-container {
     padding-bottom: 0 !important;
 }
+
+/* Custom: keep the titlebar app button aligned with 20px tabs on macOS. */
+@media (-moz-platform: macos) {
+    #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-button,
+    #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-button #PanelUI-menu-button,
+    #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-menu-button .toolbarbutton-badge-stack {
+        height: 20px !important;
+        min-height: 20px !important;
+    }
+
+    #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-menu-button .toolbarbutton-icon {
+        padding: 5px !important;
+        margin-top: 1px !important;
+    }
+
+    #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-menu-button::after {
+        line-height: 18px !important;
+    }
+}
