@@ -10,3 +10,20 @@
     display: flex !important;
     width: 20px !important;
 }
+
+/* Custom: force classic squared tabs down to 20px.
+   This also trims the close button and label padding so the layout stays usable. */
+:root {
+    --classic_squared_tabs_tab_height: 20px !important;
+}
+
+.tab-close-button {
+    width: 12px !important;
+    height: 12px !important;
+    padding: 1px !important;
+    margin-inline-end: -4px !important;
+}
+
+.tab-label-container {
+    padding-bottom: 0 !important;
+}
