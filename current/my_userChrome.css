@@ -46,3 +46,67 @@
         line-height: 18px !important;
     }
 }
+
+/* Custom: compress navigation toolbar, urlbar, and bookmarks toolbar together. */
+:root {
+    --toolbarbutton-inner-padding: 4px !important;
+    --urlbar-container-height: 28px !important;
+    --urlbar-height: 26px !important;
+    --bookmark_items_height: 18px !important;
+}
+
+#nav-bar {
+    min-height: 30px !important;
+}
+
+#nav-bar #nav-bar-overflow-button,
+#nav-bar #nav-bar-customization-target > toolbarbutton,
+#nav-bar #nav-bar-customization-target > toolbaritem,
+#nav-bar #nav-bar-customization-target #stop-reload-button > toolbarbutton {
+    margin-block: 0 !important;
+    padding-block: 0 !important;
+}
+
+#urlbar-container,
+#search-container {
+    padding-block: 0 !important;
+    margin-inline: 2px !important;
+}
+
+#urlbar,
+#searchbar,
+.searchbar-textbox,
+#urlbar-background {
+    min-height: 26px !important;
+    height: 26px !important;
+    margin-block: 1px !important;
+}
+
+#urlbar > :is(#urlbar-input-container, .urlbar-input-container),
+#searchbar .searchbar-textbox {
+    min-height: 24px !important;
+    height: 24px !important;
+    padding-block: 0 !important;
+}
+
+#urlbar .urlbar-icon,
+#urlbar .urlbar-page-action,
+#searchbar .searchbar-search-icon,
+#searchbar .search-go-button {
+    width: 14px !important;
+    height: 14px !important;
+    padding: 1px !important;
+}
+
+#PersonalToolbar {
+    min-height: 22px !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+#PersonalToolbar toolbarbutton.bookmark-item,
+#PlacesToolbar toolbarbutton.bookmark-item {
+    min-height: 18px !important;
+    padding-block: 0 !important;
+    margin-block: 1px !important;
+}
