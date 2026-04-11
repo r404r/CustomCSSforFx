@@ -144,6 +144,12 @@ Look for `/* @import "./css/locationbar/reader_alternative_icon.css"; /**/`
 Remove `/*` at lines start to enable the alternative reader icon appearance.  
 The result should look like `@import "./css/locationbar/reader_alternative_icon.css"; /**/` 
 
+_Example 4_  
+Open `userChrome.css` file  
+Look for `/* @import "./css/locationbar/ac_popup_megabar_floating_shadow.css"; /**/` or add `@import "./css/locationbar/ac_popup_megabar_floating_shadow.css"; /**/` in the location bar popup section.  
+Enable it to give the megabar autocomplete popup a floating border and shadow.  
+Restart Firefox after saving the file. 
+
 ## Using a symbolic link for the `chrome` folder
 
 Instead of copying the files from `current/` into a Firefox profile manually after every change, it is also possible to link the profile `chrome` folder directly to this repositories `current/` folder.

@@ -148,6 +148,12 @@ _例 3_
 行頭の `/*` を削除すると、代替リーダーアイコンの外観を有効にできます。  
 結果は `@import "./css/locationbar/reader_alternative_icon.css"; /**/` のようになります。  
 
+_例 4_  
+`userChrome.css` ファイルを開く  
+`/* @import "./css/locationbar/ac_popup_megabar_floating_shadow.css"; /**/` を探すか、location bar popup セクションに `@import "./css/locationbar/ac_popup_megabar_floating_shadow.css"; /**/` を追加します。  
+有効にすると、megabar のオートコンプリートポップアップに浮いたような境界線と影が付きます。  
+保存後に Firefox を再起動してください。  
+
 ## `chrome` フォルダーをシンボリックリンクで使う
 
 CSS を頻繁に変更する場合、変更のたびに `current/` の内容を Firefox プロファイルへ手動でコピーする代わりに、プロファイル内の `chrome` フォルダーをこのリポジトリの `current/` フォルダーへ直接リンクすることもできます。

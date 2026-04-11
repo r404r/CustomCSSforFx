@@ -148,6 +148,12 @@ _示例 3_
 删除行首的 `/*`，即可启用替代版阅读器图标外观。  
 结果应如下所示：`@import "./css/locationbar/reader_alternative_icon.css"; /**/`  
 
+_示例 4_  
+打开 `userChrome.css` 文件  
+查找 `/* @import "./css/locationbar/ac_popup_megabar_floating_shadow.css"; /**/`，或者在 location bar popup 区域添加 `@import "./css/locationbar/ac_popup_megabar_floating_shadow.css"; /**/`。  
+启用后，megabar 自动完成弹层会获得浮动边框和阴影效果。  
+保存文件后重启 Firefox。  
+
 ## 为 `chrome` 文件夹使用符号链接
 
 如果你经常修改 CSS，不想在每次改动后都手动把 `current/` 中的文件复制到 Firefox 配置文件中，也可以直接把配置文件里的 `chrome` 文件夹链接到仓库的 `current/` 文件夹。
