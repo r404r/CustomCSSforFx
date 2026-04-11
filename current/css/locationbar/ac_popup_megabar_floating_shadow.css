@@ -1,0 +1,30 @@
+/* Firefox userChrome.css tweaks ********************************************************/
+/* Github: https://github.com/aris-t2/customcssforfx ************************************/
+/****************************************************************************************/
+
+
+:root{
+  --ac_popup_floating_border_color: color-mix(in srgb, currentColor 16%, transparent);
+  --ac_popup_floating_box_shadow:
+    0 10px 26px rgba(0,0,0,.18),
+    0 2px 8px rgba(0,0,0,.10) !important;
+
+  &[lwtheme] {
+    --ac_popup_floating_border_color: color-mix(in srgb, currentColor 20%, transparent);
+    --ac_popup_floating_box_shadow:
+      0 12px 28px rgba(0,0,0,.24),
+      0 3px 10px rgba(0,0,0,.14) !important;
+  }
+}
+
+#urlbar[open] > .urlbarView,
+#PopupAutoCompleteRichResult[autocompleteinput="urlbar"] {
+  border: 1px solid var(--ac_popup_floating_border_color) !important;
+  border-radius: var(--toolbarbutton-border-radius) !important;
+  box-shadow: var(--ac_popup_floating_box_shadow);
+  overflow: clip !important;
+}
+
+#urlbar[open] .urlbarView-body-inner {
+  border-top: 0 !important;
+}
