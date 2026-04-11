@@ -110,3 +110,10 @@
     padding-block: 0 !important;
     margin-block: 1px !important;
 }
+
+/* Custom: give right-side extension buttons a bit more horizontal breathing room. */
+#nav-bar #nav-bar-customization-target > toolbaritem[id$="-browser-action"],
+#nav-bar #nav-bar-customization-target > #unified-extensions-button,
+#nav-bar #nav-bar-customization-target > toolbaritem:has(.unified-extensions-item-action-button) {
+    margin-inline: 1px !important;
+}
