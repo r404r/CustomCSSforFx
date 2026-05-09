@@ -33,8 +33,29 @@
     #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-button,
     #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-button #PanelUI-menu-button,
     #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-menu-button .toolbarbutton-badge-stack {
+        box-sizing: border-box !important;
         height: 20px !important;
+        max-height: 20px !important;
         min-height: 20px !important;
+    }
+
+    #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-button {
+        overflow: hidden !important;
+    }
+
+    #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-button #PanelUI-menu-button {
+        box-shadow: 0 1px 0 hsla(0,0%,100%,.2) inset,
+                    0 0 2px 1px hsla(0,0%,100%,.25) inset !important;
+    }
+
+    #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-button #PanelUI-menu-button:hover:not(:active):not([open]) {
+        box-shadow: 0 1px 0 hsla(0,0%,100%,.15) inset,
+                    0 0 2px 1px hsla(0,0%,100%,.5) inset !important;
+    }
+
+    #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-button #PanelUI-menu-button:is(:hover:active, [open]) {
+        box-shadow: 0 2px 3px rgba(0,0,0,.4) inset,
+                    0 1px 1px rgba(0,0,0,.2) inset !important;
     }
 
     #main-window:is([tabsintitlebar], [customtitlebar]) #PanelUI-menu-button .toolbarbutton-icon {
