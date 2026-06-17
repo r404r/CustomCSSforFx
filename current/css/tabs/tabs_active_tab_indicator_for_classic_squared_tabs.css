@@ -4,7 +4,7 @@
 
 
 .tabbrowser-tab[selected]:not([usercontextid]) .tab-content {
-  border-bottom: 2px solid Highlight !important;
+  border-bottom: 2px solid #ff8c00 !important;
 }
 
 .tabbrowser-tab[selected]:not([usercontextid]) .tab-content > * {

@@ -704,7 +704,7 @@
 /* @import "./css/tabs/tabs_fully_squared.css"; /**/
 
 /* @import "./css/tabs/tabs_container_indicator_for_classic_squared_tabs.css"; /**/
-/* @import "./css/tabs/tabs_active_tab_indicator_for_classic_squared_tabs.css"; /**/
+@import "./css/tabs/tabs_active_tab_indicator_for_classic_squared_tabs.css"; /**/
 /* @import "./css/tabs/newtab_tab_size_equals_tab_size.css"; /**/
 /* @import "./css/tabs/newtab_button_always_visible.css"; /**/
 /* @import "./css/tabs/tab_icon_inactive_tabs_lower_opacity.css"; /**/
