@@ -5,6 +5,21 @@
 
 .tabbrowser-tab[selected]:not([usercontextid]) .tab-content {
   border-bottom: 2px solid #ff8c00 !important;
+  position: relative !important;
+}
+
+.tabbrowser-tab[selected]:not([usercontextid]) .tab-content::after {
+  content: "" !important;
+  position: absolute !important;
+  left: 50% !important;
+  top: 3px !important;
+  width: 10px !important;
+  height: 10px !important;
+  margin-left: -5px !important;
+  border-radius: 50% !important;
+  background: #cc2020 !important;
+  box-shadow: 0 0 0 1px rgba(0,0,0,.15) !important;
+  pointer-events: none !important;
 }
 
 .tabbrowser-tab[selected]:not([usercontextid]) .tab-content > * {
